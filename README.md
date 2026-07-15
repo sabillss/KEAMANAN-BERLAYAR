@@ -127,6 +127,3 @@ This application helps users to:
 - Improve decision-making based on weather conditions
 - Support safer navigation for fishermen and ferry operators
 
----
-- GitHub: https://github.com/sabillss
-- LinkedIn: *(Add your LinkedIn profile here)*
