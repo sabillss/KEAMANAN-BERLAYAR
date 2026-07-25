@@ -1,129 +1,106 @@
-# 🌊 Zona Aman Berlayar
+# 🌊 Prediksi Kondisi Aman Berlayar
 
-An interactive **web-based decision support system** that predicts sailing safety using the **Fuzzy Tsukamoto** method. The application analyzes weather conditions and vessel type to provide safety recommendations for fishermen and ship operators before sailing.
+## 📖 Project Overview
 
----
-
-## 📌 Project Overview
-
-Sailing safety is highly influenced by environmental conditions such as wind speed and wave height. This project applies the **Fuzzy Tsukamoto** method to evaluate sailing conditions and classify the safety level based on weather parameters and vessel type.
-
-The system provides real-time predictions and safety recommendations through an interactive web interface, helping users make better decisions before going to sea.
+Proyek ini merupakan aplikasi berbasis web yang dikembangkan untuk membantu memprediksi tingkat keamanan pelayaran berdasarkan kondisi cuaca laut. Sistem menggunakan **Matriks Risiko BMKG** sebagai dasar pengambilan keputusan dengan mempertimbangkan **kecepatan angin**, **tinggi gelombang**, dan **jenis kapal**. Seluruh logika aplikasi dibangun menggunakan **JavaScript**, sehingga hasil evaluasi dapat ditampilkan secara langsung melalui antarmuka web yang interaktif.
 
 ---
 
-## 🎯 Business Problem
+## 🛠️ Project Workflow
 
-Fishermen and ship operators often face dangerous sea conditions caused by:
-
-- High wind speeds
-- Large wave heights
-- Uncertainty in determining whether sailing is safe
-
-Without a proper decision support system, these conditions can increase operational risks and threaten the safety of passengers and crew.
-
----
-
-## 💡 Solution
-
-A web-based decision support system was developed using the **Fuzzy Tsukamoto** method.
-
-The application performs:
-
-- Input validation for weather conditions
-- Fuzzy membership calculation
-- Rule-based inference using Fuzzy Tsukamoto
-- Defuzzification process
-- Automatic sailing safety prediction
-- Safety recommendations based on prediction results
+| Tahapan | Tools | Deskripsi |
+|---------|-------|-----------|
+| User Input | HTML | Pengguna memasukkan nilai kecepatan angin, tinggi gelombang, dan memilih jenis kapal. |
+| Input Validation | JavaScript | Memastikan seluruh data yang dimasukkan valid sebelum diproses. |
+| Risk Evaluation | JavaScript | Mengevaluasi kondisi pelayaran menggunakan logika berdasarkan Matriks Risiko BMKG. |
+| Recommendation | JavaScript | Menentukan tingkat keamanan pelayaran dan memberikan rekomendasi sesuai hasil evaluasi. |
+| User Interface | HTML & CSS | Menampilkan hasil prediksi secara interaktif dan mudah dipahami. |
 
 ---
 
-## 🛠 Tools & Technologies
+## 📌 Business Problem
 
-- Python *(or PHP, JavaScript, etc. — sesuaikan dengan project kamu)*
-- HTML
-- CSS
-- JavaScript
-- Fuzzy Tsukamoto
-- Web Application
+Kondisi cuaca laut yang berubah-ubah dapat meningkatkan risiko kecelakaan pelayaran. Nelayan maupun operator kapal memerlukan informasi yang mudah dipahami untuk menentukan apakah kondisi saat ini aman untuk berlayar.
+
+Tanpa sistem pendukung keputusan, pengguna harus menafsirkan data cuaca secara manual sehingga berpotensi menghasilkan keputusan yang kurang tepat.
 
 ---
 
-## 📂 Dataset / Input Parameters
+## 🎯 Project Objectives
 
-The system uses the following input parameters:
+Proyek ini dikembangkan untuk:
 
-- 🌬 Wind Speed
-- 🌊 Wave Height
-- 🚢 Vessel Type
-
-Supported vessel types:
-
-- Fishing Boat
-- Ferry
+- Mengevaluasi keamanan pelayaran berdasarkan parameter cuaca laut.
+- Membantu pengguna menentukan apakah kondisi saat ini aman untuk berlayar.
+- Menyajikan hasil evaluasi secara sederhana dan mudah dipahami.
+- Mendukung pengambilan keputusan sebelum melakukan aktivitas pelayaran.
 
 ---
 
 ## 📊 Application Features
 
-### Safety Prediction
+Aplikasi menyediakan beberapa fitur utama, antara lain:
 
-- Real-time sailing safety prediction
-- Automatic fuzzy calculation
-- Sailing safety classification
-
-### Input Parameters
-
-- Wind Speed
-- Wave Height
-- Vessel Type
-
-### Prediction Results
-
-The system classifies sailing conditions into:
-
-- ✅ Safe
-- ⚠️ Alert
-- 🚫 Dangerous
-
-### Recommendations
-
-- Safety recommendations based on prediction results
-- Decision support before sailing
+- Input Kecepatan Angin (knot)
+- Input Tinggi Gelombang (meter)
+- Pemilihan Jenis Kapal
+- Validasi Input
+- Evaluasi Risiko Berdasarkan Matriks BMKG
+- Status Keamanan Pelayaran
+- Rekomendasi Keselamatan
 
 ---
 
-## 📈 Results
+## 📈 Decision Logic
 
-The application successfully predicts sailing safety based on weather conditions and vessel type using the **Fuzzy Tsukamoto** method.
+Sistem melakukan evaluasi berdasarkan tiga parameter utama:
 
-The system provides:
+- 🌬️ Kecepatan Angin
+- 🌊 Tinggi Gelombang
+- 🚢 Jenis Kapal
 
-- Accurate safety classification
-- Automatic fuzzy calculations
-- Easy-to-understand recommendations
-- Faster decision-making for sailing activities
+Logika aplikasi dibangun menggunakan **JavaScript** dengan mengacu pada **Matriks Risiko BMKG** untuk menentukan tingkat keamanan pelayaran.
 
-This application helps fishermen and ship operators evaluate sailing conditions before departure, reducing operational risks and improving maritime safety.
+Hasil evaluasi diklasifikasikan menjadi:
+
+- 🟢 Aman
+- 🟡 Waspada
+- 🔴 Berbahaya
+
+---
+
+## 💡 Recommendations
+
+Berdasarkan hasil evaluasi, sistem memberikan rekomendasi sebagai berikut:
+
+- **Aman** → Aktivitas pelayaran dapat dilakukan.
+- **Waspada** → Disarankan meningkatkan kewaspadaan dan terus memantau perkembangan cuaca.
+- **Berbahaya** → Aktivitas pelayaran sebaiknya ditunda hingga kondisi cuaca membaik.
+
+---
+
+## 🛠️ Tools & Technologies
+
+- HTML
+- CSS
+- JavaScript
+- BMKG Risk Matrix
+
+---
+
+## 📂 Reference
+
+Referensi penentuan tingkat keamanan pelayaran menggunakan **Matriks Risiko BMKG** berdasarkan:
+
+- Kecepatan Angin
+- Tinggi Gelombang
+- Jenis Kapal
 
 ---
 
 ## 📷 Application Preview
-<img width="916" height="513" alt="image" src="https://github.com/user-attachments/assets/56077ce0-535d-4e39-bdc3-20fc82092574" />
+
+<img width="2876" height="1538" alt="image" src="https://github.com/user-attachments/assets/a10e72cc-1138-4be2-8f67-d918fd382692" />
 
 
-
-
----
-
-
-## 🚀 Business Impact
-
-This application helps users to:
-
-- Predict sailing safety before departure
-- Reduce maritime operational risks
-- Improve decision-making based on weather conditions
-- Support safer navigation for fishermen and ferry operators
 
